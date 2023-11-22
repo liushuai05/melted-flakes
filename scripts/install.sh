@@ -16,12 +16,12 @@ while true; do
         1)
             set_user_passwd
             sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/laptop/{wayland,x11}/default.nix
-            nixos-install --no-root-passwd --flake .#laptop
+            nixos-install --option substituters https://mirror.sjtu.edu.cn/nix-channels/store  --no-root-passwd --flake .#laptop
             break ;;
         2)
             set_user_passwd
             sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/laptop_minimal/default.nix
-            nixos-install --no-root-passwd --flake .#laptop-minimal
+            nixos-install --option substituters https://mirror.sjtu.edu.cn/nix-channels/store --no-root-passwd --flake .#laptop-minimal
             break ;;
         *)
             echo "Invalid choice, please try again."

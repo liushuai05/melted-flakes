@@ -5,8 +5,8 @@
 
   outputs = inputs @ { self, nixpkgs, flake-parts, ... }:
     let
-      user = "ruixi";
-      domain = "ruixi2fp.top";
+      user = "edison";
+      domain = "edison2fp.top";
       selfPkgs = import ./pkgs;
     in
     flake-parts.lib.mkFlake { inherit inputs; } {
@@ -70,7 +70,7 @@
                 git submodule update --init --recursive
                 cd "$FLAKE_ROOT"/blog
                 git checkout master
-                emanote -L ./.
+         #       emanote -L ./.
               '';
               category = "Tools";
             };
@@ -154,7 +154,7 @@
         inputs.nixpkgs.follows = "nixpkgs";
       };
       disko.url = "github:nix-community/disko";
-      emanote.url = "github:srid/emanote";
+  #    emanote.url = "github:srid/emanote";
       joshuto.url = "github:kamiyaa/joshuto";
       go-musicfox.url = "github:go-musicfox/go-musicfox";
       nixd.url = "github:nix-community/nixd";
