@@ -4,7 +4,7 @@ cd /mnt/etc/nixos/Flakes
 
 function set_user_name {
     echo $'\e[1;32mset your user login name\e[0m'
-    name_hash=$( read -p  $'\e[1;32mEnter your name: \e[0m' -r device )
+    read -p  $'\e[1;32mEnter your name: \e[0m' -r name_hash 
 }
 function set_user_passwd {
     echo $'\e[1;32mset your user login password\e[0m'
@@ -19,7 +19,7 @@ while true; do
     case $device in
         1)
             set_user_name
-            sed -i "/user/c\ \ \ \ user\ =\ \"$name_hash\";" ./flake.nix
+            sed -i "/user/c\ \ \ \ \ user\ =\ \"$name_hash\";" ./flake.nix
             sed -i "/hostName/c\ \ \ \ hostName\ =\ \"${name_hash^}\";" ./hosts/system.nix
 
             set_user_passwd
@@ -28,7 +28,7 @@ while true; do
             break ;;
         2)
             set_user_name
-            sed -i "/user/c\ \ \ \ user\ =\ \"$name_hash\";" ./flake.nix
+            sed -i "/user/c\ \ \ \ \ user\ =\ \"$name_hash\";" ./flake.nix
             sed -i "/hostName/c\ \ \ \ hostName\ =\ \"${name_hash^}\";" ./hosts/system.nix
 
             set_user_passwd
