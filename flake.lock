@@ -79,23 +79,18 @@
       "inputs": {
         "check-flake": "check-flake",
         "flake-parts": [
-        #  "emanote",
           "flake-parts"
         ],
         "flake-root": [
-        #  "emanote",
           "flake-root"
         ],
         "haskell-flake": [
-        #  "emanote",
           "haskell-flake"
         ],
         "nixpkgs": [
-        #  "emanote",
           "nixpkgs"
         ],
         "treefmt-nix": [
-        #  "emanote",
           "treefmt-nix"
         ]
       },
@@ -1898,7 +1893,6 @@
       "inputs": {
         "disko": "disko",
         "emacs-overlay": "emacs-overlay",
-    #    "emanote": "emanote",
         "flake-compat": "flake-compat",
         "flake-parts": "flake-parts_2",
         "flake-root": "flake-root_2",
@@ -2095,7 +2089,6 @@
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
-    #      "emanote",
           "nixpkgs"
         ]
       },
