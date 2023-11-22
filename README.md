@@ -230,6 +230,9 @@ nord: 默认
 12. 安装
 
 ```bash
+#使用临时shell安装
+, Install
+#使用原生方法安装
 nixos-install --no-root-passwd --flake .#laptop
 
 #或者指定源：
