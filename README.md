@@ -118,7 +118,12 @@ https://user-images.githubusercontent.com/75824585/220659189-be78cf81-0b8c-4865-
 
 ### 如何安装?(root on tmpfs)
 
-0. 准备一个 64 位的 nixos [minimal iso image](https://channels.nixos.org/nixos-22.11/latest-nixos-minimal-x86_64-linux.iso) 烧录好,然后进入 live 系统。假设我已经分好两个分区`/dev/sda1` 512M以上 `/dev/sda2` 系统/目录
+0. 准备一个 64 位的 nixos [minimal iso image](https://channels.nixos.org/nixos-22.11/latest-nixos-minimal-x86_64-linux.iso) 烧录好,然后进入 live 系统。假设我已经分好两个分区`/dev/sda1` 512M以上 `/dev/sda2` 系统/目录 ,进入root模式
+···bash
+sudo -i
+```
+
+
 1. 格式化分区
 
 ```bash
