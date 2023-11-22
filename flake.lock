@@ -79,23 +79,23 @@
       "inputs": {
         "check-flake": "check-flake",
         "flake-parts": [
-          "emanote",
+        #  "emanote",
           "flake-parts"
         ],
         "flake-root": [
-          "emanote",
+        #  "emanote",
           "flake-root"
         ],
         "haskell-flake": [
-          "emanote",
+        #  "emanote",
           "haskell-flake"
         ],
         "nixpkgs": [
-          "emanote",
+        #  "emanote",
           "nixpkgs"
         ],
         "treefmt-nix": [
-          "emanote",
+        #  "emanote",
           "treefmt-nix"
         ]
       },
@@ -133,30 +133,30 @@
         "type": "github"
       }
     },
-    "emanote": {
-      "inputs": {
-        "ema": "ema",
-        "flake-parts": "flake-parts",
-        "flake-root": "flake-root",
-        "haskell-flake": "haskell-flake",
-        "nixpkgs": "nixpkgs_3",
-        "systems": "systems_2",
-        "treefmt-nix": "treefmt-nix"
-      },
-      "locked": {
-        "lastModified": 1689693248,
-        "narHash": "sha256-OV51NIumOXjUpFERtucO5vfL51oFDzQS4+IP8f2R59E=",
-        "owner": "srid",
-        "repo": "emanote",
-        "rev": "c2ede735dcba11daff6c6dd30c39e0aef4ecee9b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "srid",
-        "repo": "emanote",
-        "type": "github"
-      }
-    },
+ #   "emanote": {
+ #     "inputs": {
+ #       "ema": "ema",
+ #       "flake-parts": "flake-parts",
+ #       "flake-root": "flake-root",
+ #       "haskell-flake": "haskell-flake",
+ #       "nixpkgs": "nixpkgs_3",
+ #       "systems": "systems_2",
+ #       "treefmt-nix": "treefmt-nix"
+ #     },
+ #     "locked": {
+ #       "lastModified": 1689693248,
+ #       "narHash": "sha256-OV51NIumOXjUpFERtucO5vfL51oFDzQS4+IP8f2R59E=",
+ #       "owner": "srid",
+ #       "repo": "emanote",
+ #       "rev": "c2ede735dcba11daff6c6dd30c39e0aef4ecee9b",
+ #       "type": "github"
+ #     },
+ #     "original": {
+ #       "owner": "srid",
+ #       "repo": "emanote",
+ #       "type": "github"
+ #     }
+ #   },
     "fenix": {
       "inputs": {
         "nixpkgs": [
@@ -1922,7 +1922,7 @@
       "inputs": {
         "disko": "disko",
         "emacs-overlay": "emacs-overlay",
-        "emanote": "emanote",
+    #    "emanote": "emanote",
         "flake-compat": "flake-compat",
         "flake-parts": "flake-parts_2",
         "flake-root": "flake-root_2",
@@ -2119,7 +2119,7 @@
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
-          "emanote",
+    #      "emanote",
           "nixpkgs"
         ]
       },

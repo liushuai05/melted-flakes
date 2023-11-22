@@ -24,7 +24,7 @@ flake_input=(
     nil
     neovim-nightly-overlay
     treefmt-nix
-    emanote
+  #  emanote
     joshuto
     nixd
 )
