@@ -19,7 +19,7 @@ while true; do
     case $device in
         1)
             set_user_name
-            sed -i "/user/c\ \ \ \ \  user\ =\ \"$name_hash\";" ./flake.nix
+            sed -i "/user\ =/c\ \ \ \ \  user\ =\ \"$name_hash\";" ./flake.nix
             sed -i "/hostName/c\ \ \ \ hostName\ =\ \"${name_hash^}\";" ./hosts/system.nix
 
             set_user_passwd
@@ -28,7 +28,7 @@ while true; do
             break ;;
         2)
             set_user_name
-            sed -i "/user/c\ \ \ \ \  user\ =\ \"$name_hash\";" ./flake.nix
+            sed -i "/user\ =/c\ \ \ \ \  user\ =\ \"$name_hash\";" ./flake.nix
             sed -i "/hostName/c\ \ \ \ hostName\ =\ \"${name_hash^}\";" ./hosts/system.nix
 
             set_user_passwd
