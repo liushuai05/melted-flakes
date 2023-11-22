@@ -2,6 +2,10 @@ set -e
 
 cd /mnt/etc/nixos/Flakes
 
+function set_user_name {
+    echo $'\e[1;32mset your user login name\e[0m'
+    name_hash=$( read -p  $'\e[1;32mEnter your name: \e[0m' -r device )
+}
 function set_user_passwd {
     echo $'\e[1;32mset your user login password\e[0m'
     passwd_hash=$(mkpasswd -m sha-512  2>/dev/null)
@@ -14,11 +18,19 @@ while true; do
 
     case $device in
         1)
+            set_user_name
+            sed -i "/user/c\ \ \ \ user\ =\ \"$name_hash\";" ./flake.nix
+            sed -i "/hostName/c\ \ \ \ hostName\ =\ \"${name_hash^}\";" ./hosts/system.nix
+
             set_user_passwd
             sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/laptop/{wayland,x11}/default.nix
             nixos-install --option substituters https://mirror.sjtu.edu.cn/nix-channels/store  --no-root-passwd --flake .#laptop
             break ;;
         2)
+            set_user_name
+            sed -i "/user/c\ \ \ \ user\ =\ \"$name_hash\";" ./flake.nix
+            sed -i "/hostName/c\ \ \ \ hostName\ =\ \"${name_hash^}\";" ./hosts/system.nix
+
             set_user_passwd
             sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/laptop_minimal/default.nix
             nixos-install --option substituters https://mirror.sjtu.edu.cn/nix-channels/store --no-root-passwd --flake .#laptop-minimal
