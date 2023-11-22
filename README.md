@@ -151,7 +151,7 @@ sudo -i
 
 ```bash
 nix-shell -p git
-git clone  https://github.com/Ruixi-rebirth/flakes.git /mnt/etc/nixos/Flakes
+git clone https://github.com/liushuai05/melted-flakes.git /mnt/etc/nixos/Flakes
 cd  /mnt/etc/nixos/Flakes/
 nix develop --extra-experimental-features nix-command --extra-experimental-features flakes
 ```
