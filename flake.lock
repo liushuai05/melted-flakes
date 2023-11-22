@@ -133,30 +133,6 @@
         "type": "github"
       }
     },
- #   "emanote": {
- #     "inputs": {
- #       "ema": "ema",
- #       "flake-parts": "flake-parts",
- #       "flake-root": "flake-root",
- #       "haskell-flake": "haskell-flake",
- #       "nixpkgs": "nixpkgs_3",
- #       "systems": "systems_2",
- #       "treefmt-nix": "treefmt-nix"
- #     },
- #     "locked": {
- #       "lastModified": 1689693248,
- #       "narHash": "sha256-OV51NIumOXjUpFERtucO5vfL51oFDzQS4+IP8f2R59E=",
- #       "owner": "srid",
- #       "repo": "emanote",
- #       "rev": "c2ede735dcba11daff6c6dd30c39e0aef4ecee9b",
- #       "type": "github"
- #     },
- #     "original": {
- #       "owner": "srid",
- #       "repo": "emanote",
- #       "type": "github"
- #     }
- #   },
     "fenix": {
       "inputs": {
         "nixpkgs": [
